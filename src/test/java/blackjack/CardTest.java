@@ -1,5 +1,6 @@
-package blackjack.model;
+package blackjack;
 
+import blackjack.model.Card;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

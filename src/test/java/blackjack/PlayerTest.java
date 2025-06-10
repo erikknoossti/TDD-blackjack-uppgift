@@ -1,5 +1,7 @@
-package blackjack.model;
+package blackjack;
 
+import blackjack.model.Card;
+import blackjack.model.Player;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
