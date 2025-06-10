@@ -17,4 +17,19 @@ public class DeckTest {
     public void testDeckHas52CardsInitially() {
         assertEquals(52, deck.remainingCards());
     }
+    @Test
+    public void testDrawCardReducesDeckSize() {
+        Card drawn = deck.drawCard();
+        assertNotNull(drawn);
+        assertEquals(51, deck.remainingCards());
+    }
+
+    @Test
+    public void testDrawAllCardsAndThenFail() {
+        for (int i = 0; i < 52; i++) {
+            deck.drawCard();
+        }
+        assertEquals(0, deck.remainingCards());
+        assertThrows(IllegalStateException.class, deck::drawCard);
+    }
 }
